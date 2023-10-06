@@ -1,0 +1,16 @@
+name: Greeting New Visistors
+
+on: [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: "Your first issue! Don't worry, we'll resolve it in no time! For now, feel free to [check us out](https//github.com/inch-worm-games/inch-worm-games)"
+        pr-message: "Ahhh you bring us wisdom. This is greatly appreciated! I shall bring this to the council immediately for approval!"
