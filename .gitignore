@@ -1,7 +1,7 @@
 
 # Any special entries for local environments
 .cp-exclude
-
+.env.personal
 
 # Logs
 logs
